@@ -1,0 +1,11 @@
+server:
+  port: 9999
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/wen_db?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: postgres
+    password: 123456
+mybatis-plus:
+  mapper-locations: classpath*:com/jepusi/mapper/xml/*Mapper.xml
+  type-aliases-package: com.jepusi.entities
