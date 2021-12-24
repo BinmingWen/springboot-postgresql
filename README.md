@@ -254,6 +254,25 @@ select * from employees;
 select * from audit
 ~~~
 
+#### 12.导出sql数据
+
+###### 1.进入postgre安装目录下，用cmd模式启动下面语句
+
+> pg_dump  -U  postgres  -f  c:\db.sql postgis 
+> pg_dump -U postgres -t worldcity postgres >c:\worldcity.sql;
+pg_dump -U postgres -t \"asd\" info >d:\db\asd.sql;
+pg_dump -U postgres -t \"points\" info >d:\db\points.sql
+
+##### 2.进入postgre安装目录下，用cmd模式启动下面语句，安装postgre数据库
+要把sql文件拷贝到postgre安装的bin目录下面
+~~~
+打开cmd窗口后直接 psql -U username -W -d dbname -f xx.sql
+
+psql --> PostgreSql自带的程序
+username --> 用户名
+dbname --> 数据库名字
+~~~
+
 ### Springboot整合postgresql
 
 ##### 1.创建数据库
